@@ -6,7 +6,7 @@ metadata:
     app: flask-app
 spec:
   containers:
-  - image: agray998/task2-app
+  - image: polthomson/task2-app
     name: flask-app
     env:
     - name: MYSQL_ROOT_PASSWORD
@@ -19,10 +19,9 @@ metadata:
   labels:
     app: flask-app
 spec:
-  type: LoadBalancer
+  type: ClusterIP
   selector:
     app: flask-app
   ports:
-  - port: 80
-    targetPort: 5000
+  - port: 5000
     protocol: TCP

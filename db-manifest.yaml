@@ -6,7 +6,7 @@ metadata:
     app: db
 spec:
   containers:
-  - image: agray998/task2-db
+  - image: polthomson/task2-db
     name: mysql
     env:
     - name: MYSQL_ROOT_PASSWORD
