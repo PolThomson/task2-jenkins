@@ -10,7 +10,9 @@ spec:
     name: mysql
     env:
     - name: MYSQL_ROOT_PASSWORD
-      value: p@ssw0rd
+      valueFrom:
+        name: db-root-password
+        key: password
 ---
 apiVersion: v1
 kind: Service

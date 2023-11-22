@@ -10,7 +10,9 @@ spec:
     name: flask-app
     env:
     - name: MYSQL_ROOT_PASSWORD
-      value: p@ssw0rd
+      valueFrom:
+        secretKeyRef:
+          name: db-root-password
 ---
 apiVersion: v1
 kind: Service
