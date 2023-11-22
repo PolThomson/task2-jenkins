@@ -13,6 +13,7 @@ spec:
       valueFrom:
         secretKeyRef:
           name: db-root-password
+          key: password
 ---
 apiVersion: v1
 kind: Service
